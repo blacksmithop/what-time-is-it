@@ -11,4 +11,18 @@ setup(
     author_email='angstycoder101@gmail.com',
 
     py_modules=['what-time-is-it'],
+    install_requires=[
+        'pytest>=4',
+        'pytest-cov>=2'
+    ],
+    extras_require={
+    'extra': [
+        'tabulate',
+    ],
+    },
+    entry_points={
+    'console_scripts': [
+        'add=what_time_is_it.math:cmd_add',
+    ],
+},
 )
